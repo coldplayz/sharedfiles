@@ -11,14 +11,12 @@
 
 # export http_proxy='192.168.8.169:8080'
 
-export XDG_RUNTIME_DIR=/home/userland/.docker/run
 export PATH=/usr/bin:$PATH
 # Some applications may require the following environment variable too:
 # export DOCKER_HOST=unix:///home/userland/.docker/run/docker.sock
 
 export RUBYOPT="-KU -E utf-8:utf-8"
 
-# MySQL credentials
 alias bashrc='vi /home/userland/.bashrc'
 alias srcbashrc='source /home/userland/.bashrc'
 
@@ -50,16 +48,6 @@ alias redis2mon='cd /home/userland/Redis/redis-6.0.10 && src/redis-cli monitor'
 
 alias proxy='~/Utility_C-functions/proxy/proxy.sh && source /home/userland/.bashrc'
 
-if [[ ! "$nvm_use_runs" ]]
-then
-  export nvm_use_runs=0
-fi
-if [[ "$nvm_use_runs" -eq 0 ]]
-then
-  nvm use 18.12.1
-  nvm_use_runs=$((nvm_use_runs + 1))
-fi
-
 alias lr='ls -R'
 
 alias indent-html='~/Utility_C-functions/indent_html.py'
@@ -70,8 +58,6 @@ alias cwd='cd /home/userland/playground/learn-react/react-tutorial-vite/hacker-s
 alias cwd2='cd /home/userland/ALX/alx-react/0x01-react_intro/'
 alias api='cd /home/userland/playground/learn-react/react-tutorial'
 alias style='cd /home/userland/playground/learn-react/react-tutorial-vite/hacker-stories/src/assets/styles/sass'
-
-export IPINFO_IO_TOKEN='6fa5f0c565ea21'
 
 alias gasdb-data='vi ~/Utility_C-functions/gasdb/data.py'
 
